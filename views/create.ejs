@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Create</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <div class="container" style="padding: 100px; border: 2px solid black;">
+        <h3>Create your blog</h3>
+
+        <form action="/create" method="post" >
+
+            <div class="form-group" style="margin-bottom: 30px;">
+                <input type="text" class="form-control input-sm" name="title" placeholder="Title" required pattern="^[a-zA-Z0-9+\s]+$">
+            </div>
+
+            <div class="form-group" style="margin-bottom: 30px;">
+                <textarea style="height: 150px; width: 600px;" type="text" class="form-control input-lg" name="description" placeholder="Description" required></textarea>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 30px;">
+                <input type="email" class="form-control input-sm" name="email" placeholder="Email" required />
+            </div>
+
+
+            <button type="submit" class="btn btn-primary">Add a blog</button>        
+        </form>         
+    </div>
+    
+</body>
+</html>

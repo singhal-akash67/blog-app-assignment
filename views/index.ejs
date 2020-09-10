@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible'>
+    <title>Blog Store</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+<body>
+    <div class="container" style="padding: 100px;">
+
+        <div>
+            <a href="/create" style="float: right;">Create a Blog</a>
+        </div>
+
+
+        <div>
+            <form style="float:left;" action="/filter" method="post" >
+
+                <div class="form-group" style="margin-bottom: 30px;">
+                    <input type="email" class="form-control input-sm" name="filter" placeholder="Filter by email" required>
+                </div>    
+                <button type="submit" class="btn btn-primary">Filter</button>       
+                <a href="/"  class="btn btn-primary">Reset</a>
+            </form>    
+        </div>
+       
+        <table class="table" style="margin-top: 50px;">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <% blogs.forEach(function(blog){ %>
+                    <tr>
+                        <td><%= blog.title %></td>
+                        <td><%= blog.author %></td>
+                        <td><%= blog.description %></td>
+                    </tr>
+                    
+                <%  }); %>
+            </tbody>
+        </table>
+
+    </div>
+</body>
+</html>
+ 
